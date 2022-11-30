@@ -1,0 +1,15 @@
+﻿body {
+}
+h1{
+    color:green;
+}
+
+p {
+    background-color: red;
+    color: white;
+}
+
+    p:hover {
+        background-color: white;
+        color: red;
+    }
