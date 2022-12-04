@@ -1,0 +1,15 @@
+﻿@model Todo
+
+<div>
+    <form class="needs-validation" asp-action="Edit" asp-controller="Home" method="post">
+        <input asp-for="Id" value="@Model.Id" type="hidden" />
+        <input asp-for="IsDone" value="@Model.IsDone" type="hidden" />
+        <div>
+            <label for="Title" class="form-label">Title</label>
+            <span asp-validation-for="Title" class="text-danger"></span>
+            <input asp-for="Title" value="@Model.Title" style="border:solid; border-color:gray;" type="text" class="form-control bor" />
+        </div>
+
+        <input value="Edit" type="submit" class="btn btn-primary" />
+    </form>
+</div>

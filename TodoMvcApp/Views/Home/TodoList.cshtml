@@ -1,0 +1,23 @@
+﻿@model List<Todo>
+@{
+    ViewData["Title"] = "Todolar ro'yhati";
+}
+<div style="display: grid;">
+    <a style="float:left; margin:25px;" class="btn btn-primary" href="/home/create">Yangi todo yaratish</a>
+
+    <div>
+        @foreach (Todo todo in Model)
+        {
+            <div class="alert alert-primary" style="height: 90px; margin:15px" role="alert">
+                <div>
+                    @todo.Id) @todo.Title
+                </div>
+                <div style="float:right">
+                        <input checked="@todo.IsDone" onclick="window.location.href='/home/done/@todo.Id?isdone=@todo.IsDone'" class="form-check-input" type="checkbox" id="checkboxNoLabel" value="@todo.IsDone" aria-label="is done" />
+                    <a class="btn btn-danger" href="/home/delete/@todo.Id">Delete</a>
+                    <a class="btn btn-success" href="/home/edit/@todo.Id">Edit</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

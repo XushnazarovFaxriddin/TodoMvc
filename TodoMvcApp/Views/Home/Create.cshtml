@@ -1,0 +1,13 @@
+﻿@model Todo
+
+<div>
+    <form class="needs-validation" asp-action="Create" asp-controller="Home" method="post">
+        <div>
+            <label for="Title" class="form-label" >Title</label>
+            <span asp-validation-for="Title" class="text-danger"></span>
+            <input asp-for="Title" style="border:solid; border-color:gray;" type="text" class="form-control bor" />
+        </div>
+
+        <input value="Create" type="submit" class="btn btn-primary"/>
+    </form>
+</div>
